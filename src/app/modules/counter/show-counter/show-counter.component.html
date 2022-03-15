@@ -1,5 +1,11 @@
 <div class="cont">
   <div class="counter flex-center">{{ showCounter }}</div>
-  <div class="bg-danger operator flex-center" (click)="addOne()">+</div>
-  <div class="bg-danger operator flex-center" (click)="subOne()">-</div>
+  <div class="bg-danger operator flex-center" (click)="addOne()">
+    <div class="cover"></div>
+    +
+  </div>
+  <div class="bg-danger operator flex-center" (click)="subOne()">
+    <div class="cover"></div>
+    -
+  </div>
 </div>
