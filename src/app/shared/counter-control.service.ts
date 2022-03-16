@@ -30,4 +30,14 @@ export class CounterControlService {
       console.log('Non puoi più sottrarre!!!');
     }
   }
+
+  addAmount(amount: number) {
+    this.counter = this.counter + amount;
+    this.counterSubject.next(this.counter);
+  }
+
+  subAmount(amount: number) {
+    this.counter = this.counter - amount;
+    this.counterSubject.next(this.counter);
+  }
 }

@@ -1,3 +1,8 @@
 <div class="d-flex justify-content-center align-items-center h1 m-0">
-  <ngApp-show-counter></ngApp-show-counter>
+  <ngApp-show-counter [ctrlAlert]="ctrlAlert"
+    ><ngApp-edit-counter
+      (showAlert)="showAlert($event)"
+      class="text"
+    ></ngApp-edit-counter
+  ></ngApp-show-counter>
 </div>

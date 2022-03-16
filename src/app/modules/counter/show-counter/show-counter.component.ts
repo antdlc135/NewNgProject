@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CounterControlService } from '../../../shared/counter-control.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { CounterControlService } from '../../../shared/counter-control.service';
   styleUrls: ['./show-counter.component.css'],
 })
 export class ShowCounterComponent implements OnInit {
+  @Input() ctrlAlert!: boolean;
   showCounter!: number;
 
   constructor(private counterControlService: CounterControlService) {}

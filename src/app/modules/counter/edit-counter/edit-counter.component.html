@@ -1,0 +1,31 @@
+<form #f="ngForm" class="d-flex container-fluid p-0 gap-2">
+  <input
+    data-input
+    type="number"
+    name="value"
+    placeholder="...$"
+    required
+    ngModel
+    #nameField="ngModel"
+    class="form-control w-50"
+    (ngModelChange)="inputChange($event)"
+  />
+  <span class="d-flex flex-grow-1 w-50 gap-1">
+    <button
+      type="button"
+      [disabled]="nameField.invalid"
+      class="btn btn-success flex-grow-1"
+      (click)="add(nameField.value); inputChange(nameField.value)"
+    >
+      Add
+    </button>
+    <button
+      type="button"
+      [disabled]="disactivebtn || nameField.invalid"
+      class="btn btn-danger flex-grow-1"
+      (click)="sub(nameField.value); inputChange(nameField.value)"
+    >
+      Sub
+    </button>
+  </span>
+</form>
