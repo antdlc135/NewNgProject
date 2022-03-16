@@ -2,3 +2,7 @@
   height: 100vh;
   background-color: rgb(88, 174, 195);
 }
+
+.text {
+  grid-area: 4/1/5/3;
+}

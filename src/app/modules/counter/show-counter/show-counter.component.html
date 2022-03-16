@@ -1,11 +1,13 @@
 <div class="cont">
-  <div class="counter flex-center">{{ showCounter }}</div>
-  <div class="bg-danger operator flex-center" (click)="addOne()">
-    <div class="cover"></div>
-    +
-  </div>
-  <div class="bg-danger operator flex-center" (click)="subOne()">
-    <div class="cover"></div>
-    -
-  </div>
+  <h2 class="alert" *ngIf="ctrlAlert">
+    Remember: you cannot withdraw more than the total
+  </h2>
+  <div class="counter flex-center">{{ showCounter }} $</div>
+  <button class="btn btn-primary operator flex-center" (click)="addOne()">
+    <span class="h1">+</span>
+  </button>
+  <button class="btn btn-warning operator flex-center" (click)="subOne()">
+    <span class="h1">-</span>
+  </button>
+  <ng-content class="operator"></ng-content>
 </div>
